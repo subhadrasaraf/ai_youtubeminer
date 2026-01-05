@@ -44,7 +44,8 @@ ehthumbs.db
 Thumbs.db
 
 # Project specific
-outputs/
+# outputs/  # Removed to allow tracking outputs folder
+# Ignore audio/video files globally, but allow them in outputs folder
 *.wav
 *.m4a
 *.mp3
@@ -53,6 +54,11 @@ outputs/
 *.vtt
 *.srt
 *.ttml
+# Allow all files in outputs folder (override above patterns)
+!outputs/
+!outputs/**
+# Ignore downloads folder in outputs
+outputs/downloads/
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -65,4 +71,5 @@ htmlcov/
 # Environment variables
 .env
 .env.local
+
 
